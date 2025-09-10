@@ -1,23 +1,21 @@
-export const PostInfo = () => (
-    <>
-    <div className="PostInfo" key={post.id}>
-        <div className="PostInfo__headepost">
-          <h3 className="PostInfo__title">{post.title}</h3>
+import { UserInfo } from '../UserInfo/UserInfo';
+import { CommentList } from '../CommentList/CommentList';
+import './PostInfo.scss';
 
-          <p>
-             Posted by
+export const PostInfo = ({ post }) => (
+  <div className="PostInfo">
+    <div className="PostInfo__header">
+      <UserInfo user={post.user} />
+    </div>
 
-            <UserInfo user={post.user}/>
-          </p>
-        </div>
+    <p className="PostInfo__body">
+      {post.body}
+    </p>
 
-        <p className="PostInfo__body">
-          {post.body}
-        </p>
-
-        <hr />
-
-        <b data-cy="NoCommentsMessage">No comments yet</b>
-      </div>
-    </>
-)
+    {post.comments.length > 0 ? (
+      <CommentList listaComentarios={post.comments} />
+    ) : (
+      <b data-cy="NoCommentsMessage">No comments yet</b>
+    )}
+  </div>
+);

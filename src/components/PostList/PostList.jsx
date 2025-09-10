@@ -1,9 +1,9 @@
 import { PostInfo } from "../PostInfo/PostInfo";
 
-export const PostList = ({ posts }) => (
+export const PostList = ({ post }) => (
   <section className="App">
-    {posts.map((r) => (
-       <PostInfo post={r} key={posts.id}/>
+    {post.map((r) => (
+       <PostInfo post={r} key={post.id}/>
     ))}
   </section>
 );
