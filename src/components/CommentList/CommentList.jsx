@@ -1,7 +1,5 @@
 export const CommentList = ({ listaComentarios }) => (
     <div className="CommentList">
-    {listaComentarios.map ((a) => (
-     <CommentInfo listaComents={listaComentarios}/>
-    ))}
+   {listaComentarios.map(comment => (<CommentInfo key={comment.id} listaComents={comment} />))}.
     </div>
 );

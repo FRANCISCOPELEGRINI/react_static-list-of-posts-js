@@ -11,7 +11,7 @@ export const CommentInfo = ({ listaComents }) => (
                 className="CommentInfo__email"
                 href={`mailto:${listaComents.email}`}
               >
-                Telly_Lynch@karl.co.uk
+                {listaComents.email}
               </a>
             </div>
 

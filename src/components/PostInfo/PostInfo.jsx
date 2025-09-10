@@ -1,18 +1,18 @@
 export const PostInfo = () => (
     <>
-    <div className="PostInfo" key={listausers.id}>
-        <div className="PostInfo__headelistausers">
-          <h3 className="PostInfo__title">{listausers.title}</h3>
+    <div className="PostInfo" key={post.id}>
+        <div className="PostInfo__headepost">
+          <h3 className="PostInfo__title">{post.title}</h3>
 
           <p>
              Posted by
 
-            <UserInfo user={listausers.user}/>
+            <UserInfo user={post.user}/>
           </p>
         </div>
 
         <p className="PostInfo__body">
-          {listausers.body}
+          {post.body}
         </p>
 
         <hr />
