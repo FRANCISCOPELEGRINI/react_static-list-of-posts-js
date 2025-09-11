@@ -15,7 +15,7 @@ comments: commentsFromServer.filter(c => c.postId === p.id),
 export const App = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
-    <PostList posts={post}/>
+    <PostList post={posts}/>
     <CommentList comments={p}/>
   </section>
 );
